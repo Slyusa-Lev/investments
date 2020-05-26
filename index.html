@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	
+	<body>
+
+    <div class="wrapper wrapper-form">
+      <h1 class="t-style__medium-bold t-style__header">Доходность вклада</h1>
+      <p class="intro">В любом решении важно понимать свою выгоду. Сколько я получу через год, если буду откладывать по&nbsp5&nbspтысяч с&nbspзарплаты? А&nbspесли бросить курить и&nbsp10&nbspлет складывать сэкономленные деньги на&nbspсчёт? Деньги должны работать — проверьте насколько эффективно они это делают.</p>
+      <form class="form-invest" name="invest">
+        <input class="calculator__input" type="text" name="sum" placeholder="Сумма вклада" pattern="^[0-9]+$">
+        <input class="calculator__input" type="text" name="month" placeholder="Ежемесячный взнос">
+        <input class="calculator__input" type="text" name="procent" placeholder="Доходность в %">
+        <input class="calculator__input" type="text" name="months" placeholder="Срок вклада в месяцах">
+        <input type="submit" value="Посчитать" name="submit">
+      </form>
+    
+    </div>
+    
+    <div class="wrapper-output">
+      <div class="wrapper">
+        <h2 class="t-style__medium-bold t-style__header">Результаты расчета</h2>
+        
+        <div class="container-output-sum-invest">
+          <p class="t-style__header t-style__bold"><span id="final-sum"></span> р</p>
+          <p>на вкладе через <span id="invest-months-output">12</span> месяцев</p>
+          
+          <div class="output-sum-invest">
+            <div class="historys-sum-invest">
+              <div class="history">
+                <span class="history-all-sum-invest"></span>
+                <p class="t-style__descriptor">пополнение вклада</p>
+              </div>
+              <div class="history">
+                <span class="history-procents-invest"></span>
+                <p class="t-style__descriptor">проценты</p>
+              </div>
+            </div>
+            
+            <div class="all-sum-invest" id="all-sum-invest"></div>
+            <div class="procents-invest" id="procents-invest"></div>
+          </div>
+          
+          <div class="invest-tooltip">
+            <p class="t-style__descriptor">Это сумма ваших пополнений</p>
+            <div class="details-invest">
+              <p class="t-style__bold"><span id="all-sum-invest-value"></span> р</p>
+              <p>т.е. <span class="t-style__bold" id="procents-invest-value"></span> от итоговой суммы это ваши деньги</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="container-output-invest-property">
+          <p class="t-style__medium-bold">Условия инвестиций:</p>
+          <p>Сумма вклада: <span id="start-sum">100 000</span> р</p>
+          <p>Ежемесячный взнос: <span id="sum-of-month">10 000</span> р</p>
+          <p>Доходность: <span id="procent">5</span> %</p>
+          <p>Срок: <span id="months">120<span> месяцев</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="wrapper output-invest-result"></div>
+		
+		<script src="js/script.js"></script>
+		
+	</body>
+	
+</html>
